@@ -10,7 +10,7 @@ interface Task {
   status: "pending" | "in-progress" | "completed";
 }
 
-const API_URL = "http://localhost:5000/api/tasks";
+const API_URL = process.env.A_URL || "http://localhost:5000/api/tasks";
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
